@@ -3,7 +3,6 @@ import Login from './Login'
 import Register from './Register'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
