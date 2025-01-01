@@ -13,7 +13,7 @@ const LoginPage = () =>{
     const handleCloseRegister = () => setIsRegister(false);
 
     return (
-        <div className="flex items-center h-screen bg-gradient-to-r from-blue-500/100 to-green-200">
+        <div className="flex items-center h-screen bg-gradient-to-r from-blue-500/100 to-green-200 overflow-hidden">
             <div className="m-10 h-[60%] w-[35%] opacity-0 animate-fadeIn transition ease-in duration-300">
                 <h1 className="flex font-roboto font-medium text-[48px] text-white italic">
                     <PersonStanding size={60}></PersonStanding>
@@ -34,7 +34,7 @@ const LoginPage = () =>{
                 </button>
             </div>
             {isRegister && (
-                <div className="fixed inset-0 flex items-center justify-center z-50 animate-fadeIn transition ease-in duration-75">
+                <div className="fixed inset-0 flex items-center justify-center z-50 animate-fadeInFast">
                     <RegisterForm isOpen={isRegister} onClose={handleCloseRegister} />
                 </div>
             )}

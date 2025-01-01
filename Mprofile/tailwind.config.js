@@ -9,6 +9,7 @@ export default {
       fontFamily: {
         sourGummy: ['"Sour Gummy"', 'serif'],
         roboto: ['Roboto', 'sans-serif'],
+        Quicksand: ['Quicksand', 'serif'],
       },
       keyframes: {
         fadeIn: {
@@ -20,12 +21,13 @@ export default {
           '100%': { transform: 'translateX(0)', opacity: '1' },
         },
         float: {
-          '0%, 100%': { transform: 'translateY(0)' }, // Start and end at the same position
-          '50%': { transform: 'translateY(-20px)' }, // Float up at the midpoint
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-20px)' },
         },
       },
       animation: {
         fadeIn: 'fadeIn 1s ease-in forwards',
+        fadeInFast: 'fadeIn 0.3s ease-in forwards',
         slideInFromRight: 'slideInFromRight 1s ease-out forwards',
         float: 'float 3s ease-in-out infinite',
       },
