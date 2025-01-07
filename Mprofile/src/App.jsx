@@ -6,8 +6,10 @@ function App() {
 
   return (
     <>
+      {/* <Face></Face> */}
       <Login></Login>
       {/* <Register></Register> */}
+
     </>
   )
 }

@@ -4,13 +4,18 @@ import { ScanFace } from "lucide-react";
 
 import { useState } from "react";
 import RegisterForm from "./Register";
+import RecognizeForm from "./Recognize";
 
 const LoginPage = () =>{
 
     const [isRegister, setIsRegister] = useState(false);
+    const [isRecognize, setIsRecognize] = useState(false);
 
     const handleOpenRegister = () => setIsRegister(true);
     const handleCloseRegister = () => setIsRegister(false);
+
+    const handleOpenRecognize = () => setIsRecognize(true);
+    const handleCloseRecognize = () => setIsRecognize(false);
 
     return (
         <div className="flex items-center h-screen bg-gradient-to-r from-blue-500/100 to-green-200 overflow-hidden">
@@ -28,7 +33,7 @@ const LoginPage = () =>{
                     <ArrowRight color="white" size={50} className="ml-5"></ArrowRight>
                 </button>
 
-                <button className="flex items-center mt-3 mr-3 mb-3 p-1 border">
+                <button className="flex items-center mt-3 mr-3 mb-3 p-1 border" onClick={handleOpenRecognize}>
                     <h1 className="text-white">Recognize Face</h1>
                     <ScanFace color="white" size={20} className="ml-2"></ScanFace>
                 </button>
@@ -36,6 +41,11 @@ const LoginPage = () =>{
             {isRegister && (
                 <div className="fixed inset-0 flex items-center justify-center z-50 animate-fadeInFast">
                     <RegisterForm isOpen={isRegister} onClose={handleCloseRegister} />
+                </div>
+            )}
+            {isRecognize && (
+                <div className="fixed inset-0 flex items-center justify-center z-50 animate-fadeInFast">
+                    <RecognizeForm isOpen={isRecognize} onClose={handleCloseRecognize} />
                 </div>
             )}
             <div className="flex flex-1 items-center justify-center m-10 animate-slideInFromRight transition ease-out duration-500 delay-1000">  
